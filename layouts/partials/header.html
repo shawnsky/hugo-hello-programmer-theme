@@ -31,7 +31,10 @@
   <!-- <link async="async" rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relURL }}"> -->
   <!-- <script src="{{ "/js/highlight.min.js" | relURL }}"></script> -->
   <!-- <script src="{{ "/js/smoothScroll.min.js" | relURL }}"></script> -->
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.configure({tabReplace: '    '});
+  </script>
   <script>
     (function(){
         var bp = document.createElement('script');
