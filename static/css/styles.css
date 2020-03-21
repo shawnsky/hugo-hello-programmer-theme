@@ -695,19 +695,14 @@ img {
 
 pre > code {
   font-family: "JetBrains Mono";
+  font-size: 0.99em;
 }
 
 pre > code * {
   font-family: "JetBrains Mono";
+  font-size: 0.99em;
 }
 
-/* pre > code > span {
-  font-family: "JetBrains Mono";
-}
-
-pre > code > span > span{
-  font-family: "JetBrains Mono";
-} */
 
 /* Theme Github */
 .hljs {
