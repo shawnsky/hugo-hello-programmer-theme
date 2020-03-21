@@ -1,19 +1,26 @@
 {{ partial "header" . }}
 
-<div class="tags">
-  <h1>TAGS</h1>
-  <p>{{ i18n "tagsDescription" }}</p>
-  <div class="tag-list">
-    {{ $baseurl := .Site.BaseURL }}
-    {{ $data := .Data }}
-    {{ range $key,$value := .Data.Terms.Alphabetical }}
-    <div class="tag">
-      <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-        {{ $value.Name }} <small>({{ $value.Count }})</small>
-      </a>
-    </div>
-    {{ end }}   
+<div class="post-title">
+  <img src="{{ "/images/post-title-icon.png" | relURL }}" />
+  <div class="post-meta">
+    <time>#tags</time>
+    <h1>标签</h1>
   </div>
 </div>
+
+<div class="tags">
+  {{ $baseurl := .Site.BaseURL }}
+  {{ $data := .Data }}
+  {{ range $key,$value := .Data.Terms.Alphabetical }}
+  <div class="tag">
+    <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+      {{ humanize $value.Name }}
+    </a>
+  </div>
+  {{ end }}   
+</div>
+
+<!-- 目的是移动端界面下占满全屏，使侧边栏滑动比较好看 -->
+<div style="height: 55vh"></div>
 
 {{ partial "footer" . }}

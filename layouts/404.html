@@ -1,13 +1,8 @@
 {{ partial "header.html" . }}
-<div class="post">
-  <h1 style="font-size: 5em; color: #eeeeee; line-height: 1em;">{{ i18n "notFoundTitle" }}</h1>
-  <h2>
-    {{ i18n "notFoundSubTitle" }}
-    <a href="{{ "/" | relURL }}">"{{ .Site.Title }}"</a>
-  </h2>
-  <p>{{ i18n "notFoundDescription" }}</p>
-  <div style="text-align: center;">
-    <h1><a href="{{ "/" | relURL }}">{{ i18n "notFoundGoToHome" }}</a></h1>
-  </div>
+<div style="text-align: center;">
+  <p>找不到这个页面哦</p>
+  <h1>404 Not Found</h1>
+  <p>---</p>
+  <p><a href="{{ "/" | relURL }}">回到主页</a></p>
 </div>
 {{ partial "footer.html" . }}

@@ -22,38 +22,24 @@ Modify your configuration:
 
     baseurl = "your-site-address"
     title = "your-site-name"
-
     languageCode = "ko-KR"
-    DefaultContentLanguage = "kr"
-    theme = "hugo-hello-programmer-theme"
+
+    theme = "hello-programmer"
+
+    paginate = 2
+
     disqusShortname = "XXXX"
     googleAnalytics = "UA-XXXXXXXX-X"
-    paginate = 7
 
     [author]
         name = "your-name"
         email = "your-email"
 
-    [params]
-        description = "desribe-your-site"
+Modify your theme image:
 
-Modify images for your site:
+    static/images/logo@2X.png
+    static/images/post-title-icon.png
 
-    static/images/logo@.png (Left top logo image)
-    static/images/thumbnail.png (OpenGraph tag for preview)
-
-## Multilingual
-
-Configure your language. Now support these languages. (updated 2019-06-09)
-
-* kr (Korean, 한국어)
-* en (English, a little bit stupid sentence :( Plz. Pull-request for this theme)
-
-> You can pull request other languages or fix native sentence from exist language pack.
-
-## References
-
-Guide for Korean: https://blog.lulab.net/projects/2019-05-hugo-hello-programmer-theme-v2/
 
 ## License
 

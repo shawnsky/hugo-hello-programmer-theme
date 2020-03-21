@@ -1,12 +1,22 @@
-<div class="go-top">
-  <a href="#" class="go-top-button">
-    <i class="fa fa-angle-double-up"></i>
-    <span>{{ i18n "footerToTheTop" }}</span>
-  </a>
-</div>
 <footer class="footer">
-  COPYRIGHT (C) <a href="https://blog.lulab.net">DONGGEUN,BANG (LUBANG).</a><br />
-  ALL RIGHTS RESERVED.
+  COPYRIGHT (C) 1996-2020 BY SHAWNSKY.  <a href="/notice.html">法律声明</a>.
+    
 </footer>
+
+<script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70
+    });
+
+    // Toggle button
+    document.querySelector('.mobile-navbar-icon').addEventListener('click', function() {
+      slideout.toggle();
+    });
+</script>
+
+
 </body>
 </html>
