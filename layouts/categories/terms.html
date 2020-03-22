@@ -15,9 +15,16 @@
     {{ range $key,$value := .Data.Terms.Alphabetical }}
     <li>
       <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-        <i class="fa fa-angle-right icon" aria-hidden="true"></i>
+        <i class="fa fa-angle-down icon" aria-hidden="true"></i>
         {{ humanize $value.Name }}
         <div class="count">{{ $value.Count }} posts</div>
+
+        <ul>
+          {{ range $value.Pages }}
+          <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+      </ul>
+
       </a>
     </li>
     {{ end }}
@@ -25,6 +32,6 @@
 </div>
 
 <!-- 目的是移动端界面下占满全屏，使侧边栏滑动比较好看 -->
-<div style="height: 60vh"></div>
+<!-- <div style="height: 60vh"></div> -->
 
 {{ partial "footer" . }}
