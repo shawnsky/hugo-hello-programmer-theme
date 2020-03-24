@@ -41,54 +41,63 @@ backtop.onclick = function () {
 </div>
 
 
-<!--如果是contact/projects页面，那么不展示文章标题和文章导航，
-如果文章没有标题结构，那么就不展示文章导航。 -->
-<script>
-var current_url = window.location.href;
-var toc = document.getElementById("toc");
-var title = document.getElementById("title");
-var toc_wrapper = document.getElementById("toc_wrapper");
-var title_wrapper = document.getElementById("title_wrapper");
 
-if (current_url.endsWith("/about/contact/") || current_url.endsWith("/about/projects/")) {
-  toc_wrapper.removeChild(toc);
-  title_wrapper.removeChild(title);
-}
-else if ("{{ .TableOfContents }}" == "") {
-  toc_wrapper.removeChild(toc);
-}
-</script>
 
 <section class="post-content">
 {{ .Content }}
 </section>
 
-
-<!-- 分享 -->
-<div class="share">
-<a href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}"
- onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
-      class="fab fa-facebook-f"></i></a>
-<a href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton"
- onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
-      class="fab fa-twitter"></i></a>
-<a href="http://service.weibo.com/share/share.php?url={{ .Permalink }}&sharesource=weibo&title={{ .Title }}"
- onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
-      class="fab fa-weibo"></i></a>
-<a href="http://connect.qq.com/widget/shareqq/index.html?url={{ .Permalink }}&sharesource=qzone&title={{ .Title }}&summary=点击查看原文"
- onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
-      class="fab fa-qq"></i></a>
+<div id="bottom_wrapper">
+  <div id="bottom">
+  <!-- 分享 -->
+  <div class="share">
+    <a href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}"
+    onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
+        class="fab fa-facebook-f"></i></a>
+    <a href="http://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton"
+    onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
+        class="fab fa-twitter"></i></a>
+    <a href="http://service.weibo.com/share/share.php?url={{ .Permalink }}&sharesource=weibo&title={{ .Title }}"
+    onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
+        class="fab fa-weibo"></i></a>
+    <a href="http://connect.qq.com/widget/shareqq/index.html?url={{ .Permalink }}&sharesource=qzone&title={{ .Title }}&summary=点击查看原文"
+    onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i
+        class="fab fa-qq"></i></a>
+  </div>
+  
+  <!-- 文章打赏 -->
+  <div id="tip_btn" align="center" onclick="show_tip_img()">
+  <a class="button  button-pill button-glow ">赞赏</a>
+  </div>
+  <div id="tip_img" align="center" style="display:none;margin-top:20px;">
+  <img src="{{ "/images/tip-code.png" | relURL }}" height="300px" />
+  </div>
+</div>
 </div>
 
-<!-- 文章打赏 -->
-<div id="tip_btn" align="center" onclick="show_tip_img()">
-<a class="button  button-pill button-glow ">赞赏</a>
-</div>
-<div id="tip_img" align="center" style="display:none;margin-top:20px;">
-<img src="{{ "/images/tip-code.png" | relURL }}" height="300px" />
-</div>
 <script>
 function show_tip_img() {
   document.getElementById("tip_img").style.display = "block";
 }
 </script>
+
+<!--如果是contact/projects页面，那么不展示文章标题和文章导航，
+如果文章没有标题结构，那么就不展示文章导航。 -->
+<script>
+  var current_url = window.location.href;
+  var toc = document.getElementById("toc");
+  var title = document.getElementById("title");
+  var bottom = document.getElementById("bottom");
+  var toc_wrapper = document.getElementById("toc_wrapper");
+  var title_wrapper = document.getElementById("title_wrapper");
+  var bottom_wapper = document.getElementById("bottom_wrapper");
+  
+  if (current_url.endsWith("/about/contact/") || current_url.endsWith("/about/projects/")) {
+    toc_wrapper.removeChild(toc);
+    title_wrapper.removeChild(title);
+    bottom_wapper.removeChild(bottom);
+  }
+  else if ("{{ .TableOfContents }}" == "") {
+    toc_wrapper.removeChild(toc);
+  }
+  </script>
