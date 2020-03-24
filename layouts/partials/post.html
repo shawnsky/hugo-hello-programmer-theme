@@ -41,7 +41,7 @@ backtop.onclick = function () {
 </div>
 
 
-<!--如果是AboutMe页面，那么不展示文章标题和文章导航，
+<!--如果是contact/projects页面，那么不展示文章标题和文章导航，
 如果文章没有标题结构，那么就不展示文章导航。 -->
 <script>
 var current_url = window.location.href;
@@ -50,7 +50,7 @@ var title = document.getElementById("title");
 var toc_wrapper = document.getElementById("toc_wrapper");
 var title_wrapper = document.getElementById("title_wrapper");
 
-if (current_url.endsWith("/about/contact/")) {
+if (current_url.endsWith("/about/contact/") || current_url.endsWith("/about/projects/")) {
   toc_wrapper.removeChild(toc);
   title_wrapper.removeChild(title);
 }
