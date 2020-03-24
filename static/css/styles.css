@@ -451,6 +451,11 @@ img {
   padding: 2px;
 }
 
+.categories .post-date {
+  float: right;
+  color: #cccccc;
+}
+
 /* hover only to secend class entries */
 .categories li li:hover {
   background-color: #e3e3e3;
