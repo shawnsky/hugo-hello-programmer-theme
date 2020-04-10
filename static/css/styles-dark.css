@@ -1,0 +1,633 @@
+
+  body {
+    background-color: #18191b;
+  }
+
+  a, a:visited {
+    color: #00B2A0;
+    text-decoration: none;
+  }
+  
+  code {
+    background-color: #0c0c0d;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: 'JetBrains Mono';
+  }
+  
+  blockquote {
+    border-left: 7px solid #0c0c0d;
+    padding-left: 10px;
+  }
+  
+
+  
+  
+  /*
+  * navbar
+  */
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #4A4A4A;
+    height: 44px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    padding: 0px 8px 0px 8px;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  
+  .navbar li a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .navbar li a:hover {
+    color: #00B2A0;
+  }
+  
+  .navbar .logo-title {
+    font-weight: bold;
+    color: #cccccc;
+    padding-right: 10px;
+  }
+  
+  /*
+  * container
+  */
+  
+  .container {
+    margin: auto;
+    max-width: 800px;
+    padding: 40px 30px 15px 30px;
+    font-size: 1.0rem;
+    line-height: 1.65em;
+    color: #d1d8e0;
+    background-color: #18191b;
+  }
+  
+  
+  /*
+  * summary
+  */
+  
+  .summary-sep {
+    border: 0;
+    height: 0;
+    margin: 30px 0px 20px 0px;
+  }
+  
+  .summary-content {
+    color: #a6a6a6;
+    line-height: 1.6em;
+  }
+  
+  .summary-more, .summary-more:visited {
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    background-color: #00B2A0;
+    font-size: 0.75em;
+    color: white;
+  }
+  
+  /*
+  * Post
+  */
+  
+  .post-title a {
+    text-decoration: none;
+  }
+  
+  .post-title img {
+    float: left;
+    padding-top: 5px;
+    margin-right: 10px;
+  }
+  
+  .post-meta, .post-meta a, .post-meta a:visited {
+    display: block;
+    color: #a6a6a6;
+    font-size: 0.875rem;
+    line-height: 1.7em;
+  }
+  
+  .post-meta h1 {
+    color: #00e6ce;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+  }
+  
+  .post-meta time {
+    margin-bottom: 0px;
+  }
+  
+  .post-toc {
+    float: right;
+    margin-left: 20px;
+    padding: 20px 25px 20px 25px;
+    background-color: #18191b;
+    font-size: .8rem;
+    line-height: 1.8em;
+  }
+  
+  .post-toc a, .post-toc a:visited {
+    color: #d1d8e0;
+  }
+  
+  .post-toc .title {
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 10px 10px 10px 0px;
+  }
+  
+  .post-toc ul {
+    padding-left: 20px;
+  }
+  
+  .post-content {
+    margin-top: 20px;
+  }
+  
+  .post-content hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 60px 0px 40px 0px;
+  }
+  
+  .post-content img {
+    max-width: 100%;
+  }
+  
+  .post-meta-code {
+    background-color: #f5f5f5;
+    padding: 10px;
+    color: #A0A0A0;
+    font-size: 0.75rem;
+    font-weight: 100;
+    line-height: 1.6em;
+  }
+  
+  .post-meta-code a, .post-meta-code a:visited {
+    color: #A0A0A0;
+    font-weight: 400;
+  }
+  
+  .post-meta-code .desc {
+    padding-left: 10px;
+  }
+  
+  .share {
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .share a {
+    display: inline-block;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.2rem;
+    color: #A0A0A0;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    margin: 0 .5rem;
+  }
+  
+  .share a:hover {
+    color: #00B2A0;
+  }
+  
+  .post-comment {
+    margin: 30px 0px 20px 0px;
+  }
+  
+  /*
+  * Pagination
+  */
+  
+  .paging {
+    margin: 20px 0px 15px 0px;
+    color: #00B2A0;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .paging a, a:visited {
+    margin: 0px;
+  }
+  
+  .paging a, span {
+    font-size: 1.1rem;
+  }
+  
+  .paging .left {
+    float: left;
+  }
+  
+  .paging .right {
+    float: right;
+  }
+  
+  .post-paging {
+    margin-top: 15px;
+    height: 40px;
+  }
+  
+  /*
+  * footer
+  */
+  
+  .footer {
+    padding-top: 5px;
+    font-size: 0.75rem;
+    color: #C7C7C7;
+    text-align: center;
+  }
+  
+  .footer a {
+    color: #C7C7C7;
+  }
+  
+  /*
+  * Categories
+  */
+  .categories {
+    padding: 0px 10px 0px 10px;
+    font-size: 1.2rem;
+  }
+  
+  .categories ul {
+    list-style-type: none;
+    margin: 0px;
+  }
+  
+  .categories ul ul {
+    list-style-type: circle;
+    margin: 8px 0;
+  }
+  
+  .categories li {
+    padding: 2px;
+  }
+  
+  .categories .post-date {
+    float: right;
+    color: #cccccc;
+  }
+  
+  /* hover only to secend class entries */
+  .categories li li:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .categories .icon {
+    margin-right: 15px;
+  }
+  
+  .categories .count {
+    float: right;
+  }
+  
+  /*
+  * Tags
+  */
+  .tags {
+    padding: 0px 30px 30px 30px;
+  }
+  
+  .tags .tag {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    border: 1px dashed #dddddd;
+    border-radius: 5px;
+  }
+  
+  .tags .tag:hover {
+    background-color: #eeeeee;
+  }
+  
+  /*
+  * Projects
+  */
+  .project {
+    padding: 0px 5% 0px 5%;
+  }
+  
+  .project .item {
+    margin: 10px;
+    float: left;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #b3b3b3;
+    width: 280px;
+    height: 280px;
+  }
+  
+  .project .item h1 {
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .project .item description {
+    padding: 0px 10px 0px 10px;
+    float: right;
+    color: #717171;
+  }
+  
+  /*! @license
+  *
+  * Buttons
+  * Copyright 2012-2014 Alex Wolfe and Rob Levin
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  *        http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  */
+  /*
+  * Base Button Style
+  *
+  * The default values for the .button class
+  */
+  .button {
+    color: #666;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+  }
+  
+  /*
+  * Base padding
+  *
+  */
+  .button-width-small {
+    padding: 0 10px !important;
+  }
+  
+  /*
+  * Base Layout Styles
+  *
+  * Very Miminal Layout Styles
+  */
+  .button-block,
+  .button-stacked {
+    display: block;
+  }
+  
+  /*
+  * Button Shapes
+  */
+  .button-square {
+    border-radius: 0;
+  }
+  
+  .button-box {
+    border-radius: 10px;
+  }
+  
+  .button-rounded {
+    border-radius: 4px;
+  }
+  
+  .button-pill {
+    border-radius: 200px;
+  }
+  
+  .button-circle {
+    border-radius: 100%;
+  }
+  
+  /*
+  * Glowing Buttons
+  */
+  @-webkit-keyframes glowing {
+    from {
+        -webkit-box-shadow: 0 0 0 rgba(230, 230, 230, 0.3);
+        box-shadow: 0 0 0 rgba(230, 230, 230, 0.3);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px rgba(227, 229, 230, 0.8);
+        box-shadow: 0 0 20px rgba(227, 229, 230, 0.8);
+    }
+    to {
+        -webkit-box-shadow: 0 0 0 rgba(244, 246, 247, 0.3);
+        box-shadow: 0 0 0 rgba(244, 246, 247, 0.3);
+    }
+  }
+  
+  @keyframes glowing {
+    from {
+        -webkit-box-shadow: 0 0 0 rgba(230, 230, 230, 0.3);
+        box-shadow: 0 0 0 rgba(230, 230, 230, 0.3);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px rgba(227, 229, 230, 0.8);
+        box-shadow: 0 0 20px rgba(227, 229, 230, 0.8);
+    }
+    to {
+        -webkit-box-shadow: 0 0 0 rgba(244, 246, 247, 0.3);
+        box-shadow: 0 0 0 rgba(244, 246, 247, 0.3);
+    }
+  }
+  
+  /*
+  * Glowing Buttons Base Styes
+  */
+  .button-glow {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: glowing;
+    animation-name: glowing;
+  }
+  
+  .button-glow:active, .button-glow.active, .button-glow.is-active {
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  
+  /*
+  * Button Sizes
+  *
+  * This file creates the various button sizes
+  * (ex. .button-large, .button-small, etc.)
+  */
+  .button-giant {
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 70px;
+  }
+  
+  .button-jumbo {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 60px;
+  }
+  
+  .button-large {
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 50px;
+  }
+  
+  .button-normal {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+  }
+  
+  .button-small {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+  }
+  
+  .button-tiny {
+    font-size: 9.6px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 24px;
+  }
+  
+  
+  pre > code {
+    font-family: "JetBrains Mono";
+    font-size: 0.99em;
+  }
+  
+  pre > code * {
+    font-family: "JetBrains Mono";
+    font-size: 0.99em;
+  }
+  
+  
+  /* Theme Github */
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+    color: #cccccc;
+    background: #0c0c0d;
+  }
+  
+  .hljs-comment,.hljs-quote {
+    color: #998;
+    font-style: italic
+  }
+  
+  .hljs-keyword,.hljs-selector-tag,.hljs-subst {
+    color: #cccccc;
+    font-weight: bold
+  }
+  
+  .hljs-number,.hljs-literal,.hljs-variable,.hljs-template-variable,.hljs-tag .hljs-attr {
+    color: #008080
+  }
+  
+  .hljs-string,.hljs-doctag {
+    color: #ed1249
+  }
+  
+  .hljs-title,.hljs-section,.hljs-selector-id {
+    color: #cc0000;
+    font-weight: bold
+  }
+  
+  .hljs-subst {
+    font-weight: normal
+  }
+  
+  .hljs-type,.hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold
+  }
+  
+  .hljs-tag,.hljs-name,.hljs-attribute {
+    color: #6666ff;
+    font-weight: normal
+  }
+  
+  .hljs-regexp,.hljs-link {
+    color: #009926
+  }
+  
+  .hljs-symbol,.hljs-bullet {
+    color: #990073
+  }
+  
+  .hljs-built_in,.hljs-builtin-name {
+    color: #0086b3
+  }
+  
+  .hljs-meta {
+    color: #999;
+    font-weight: bold
+  }
+  
+  .hljs-deletion {
+    background: #fdd
+  }
+  
+  .hljs-addition {
+    background: #dfd
+  }
+  
+  .hljs-emphasis {
+    font-style: italic
+  }
+  
+  .hljs-strong {
+    font-weight: bold
+  }
+  
+  
+  
+  
