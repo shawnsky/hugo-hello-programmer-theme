@@ -99,6 +99,56 @@
     </ul>
   </div>
 
+  <script>
+    var cssId = 'dark_css';
+    var icon = document.getElementById('mode-icon');
+    resume();
+  
+    function setDark() {
+      localStorage.setItem("mode","dark");
+      icon.classList.replace('fa-moon', 'fa-sun');
+      var head  = document.getElementsByTagName('head')[0];
+      var link  = document.createElement('link');
+      link.id   = cssId;
+      link.rel  = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '/css/styles-dark.css';
+      link.media = 'all';
+      head.appendChild(link);
+    }
+  
+    function setLight() {
+      localStorage.setItem("mode", "light");
+      icon.classList.replace('fa-sun', 'fa-moon');
+      icon.setAttribute('css', 'fa fa-moon');
+      var head  = document.getElementsByTagName('head')[0];
+      var link  = document.getElementById(cssId);
+      head.removeChild(link);
+    }
+  
+    function resume() {
+      switch (localStorage.getItem("mode")) {
+        case 'dark': 
+          setDark();
+          break;
+        case 'light':
+          setLight();
+          break;
+        default:
+          setLight();
+      }
+    }
+  
+    function switcher() {
+      var current = localStorage.getItem("mode");
+      if (current == null || current == 'light') {
+        setDark();
+      } else if (current == 'dark') {
+        setLight();
+      }
+    }
+  </script>
+
   <div class="container">
       
     <div class="title">
