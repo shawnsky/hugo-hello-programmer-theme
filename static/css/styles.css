@@ -221,6 +221,13 @@ img {
   padding-right: 10px;
 }
 
+.navbar-mode-icon {
+  font-size: 1.2rem;
+  color:rgb(201, 198, 198);
+  width: 36px;
+  float: right;
+}
+
 /*
 * container
 */
@@ -818,6 +825,14 @@ pre > code * {
   color:#F5F5F5;
   width: 50px;
   float: left;
+}
+
+.mobile-navbar-mode-icon {
+  padding: 8px 4px 0px 4px;
+  font-size: 1.2rem;
+  color:rgb(201, 198, 198);
+  width: 50px;
+  float: right;
 }
 
 .mobile-navbar-title {

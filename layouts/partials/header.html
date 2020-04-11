@@ -83,7 +83,10 @@
       </div>
       <div class="mobile-navbar-title">
         <a href="{{ "/" | relURL }}" class="logo">MAKE YOURSELF BETTER</a>
-      </div>  
+      </div>
+      <div class="mobile-navbar-mode-icon">
+        <i id="mobile-mode-icon" class="fa fa-moon" aria-hidden="true" onclick="switcher()"></i>
+      </div>
     </div>
 
     <!-- PC端导航栏 -->
@@ -94,18 +97,22 @@
       <li><a href="{{ "/tags" | relURL }}"><i class="fa fa-tags" aria-hidden="true"></i> 标签</a></li>
       <li><a href="{{ "/about/contact/" | relURL }}"><i class="fa fa-envelope" aria-hidden="true"></i> 联系我!</a></li>
       <li><a href="https://cn.bing.com/search?q=site%3A+xtlog.com+输入搜索内容..." target="_blank"><i class="fa fa-search" aria-hidden="true"></i> 站内搜索</a></li>
-      <a id="mode-swicher" style="float: right;" onclick="switcher()"><i id="mode-icon" class="fa fa-moon" aria-hidden="true"></i></a>
+      <div class="navbar-mode-icon">
+        <i id="mode-icon" class="fa fa-moon" aria-hidden="true" onclick="switcher()"></i>
+      </div>
       <!-- <span id="play" class="shake shake-little shake-constant shake-constant--hover" style="float:right; font-size:.875rem" onclick="document.getElementById('play').style.display='none'">🙈</span> -->
     </ul>
   </div>
 
   <script>
     var cssId = 'dark_css';
+    var mobIcon = document.getElementById('mobile-mode-icon');
     var icon = document.getElementById('mode-icon');
     resume();
   
     function setDark() {
       localStorage.setItem("mode","dark");
+      mobIcon.classList.replace('fa-moon', 'fa-sun');
       icon.classList.replace('fa-moon', 'fa-sun');
       var head  = document.getElementsByTagName('head')[0];
       var link  = document.createElement('link');
@@ -119,6 +126,7 @@
   
     function setLight() {
       localStorage.setItem("mode", "light");
+      mobIcon.classList.replace('fa-sun', 'fa-moon');
       icon.classList.replace('fa-sun', 'fa-moon');
       icon.setAttribute('css', 'fa fa-moon');
       var head  = document.getElementsByTagName('head')[0];
